@@ -132,7 +132,6 @@ const covidSlice = createSlice({
             }
         })
     }
-
 })
 
 export const selectData = (state: RootState) => state.covid.data
