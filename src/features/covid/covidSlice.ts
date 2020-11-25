@@ -44,7 +44,7 @@ const initialState: covidState = {
         },
         lastUpdate: "2020-11-24T04:27:38.000Z"
         },
-    country: "",
+    country: "japan",
     dailyData: [
         {
         totalConfirmed: 555,
@@ -97,9 +97,9 @@ export const fetchAsyncGetDaily = createAsyncThunk(
 export const fetchAsyncGetCountry = createAsyncThunk(
     "covid/getCountry",
     async (country: string) => {
-        let dynamicUrl = apiUrl
+        let dynamicUrl = apiUrl;
         if (country) {
-            dynamicUrl = `${apiUrl}/country/${country}`
+            dynamicUrl = `${apiUrl}/countries/${country}`;
         }
         const { data } = await axios.get<APIDATA>(dynamicUrl)
         return { data: data, country: country}
