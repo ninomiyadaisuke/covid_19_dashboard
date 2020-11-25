@@ -8,11 +8,12 @@ import { fetchAsyncGetCountry } from "../covidSlice";
 
 
 const useStyles = makeStyles((theme) => ({
-    formControl: {
-        marginBottom: theme.spacing(3),
-        minWidth: 320,
-      },
+  formControl: {
+    marginBottom: theme.spacing(3),
+    minWidth: 320,
+  },
 }));
+
 
 
 const SwitchCoutry: React.FC = () => {
